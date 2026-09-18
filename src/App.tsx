@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Dashboard } from './components/Dashboard';
 import { QuestionBank } from './components/QuestionBank';
+import { Admin } from './components/Admin';
 
 function App() {
   const [currentTab, setCurrentTab] = useState('dashboard');
@@ -12,6 +13,8 @@ function App() {
         return <Dashboard />;
       case 'questions':
         return <QuestionBank />;
+      case 'admin':
+        return <Admin />;
       default:
         return (
           <div className="flex flex-col items-center justify-center h-full text-slate-400">

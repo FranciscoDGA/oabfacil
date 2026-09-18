@@ -1,0 +1,26 @@
+[
+  {
+    "disciplina": "Direito Penal",
+    "tema": "Teoria do Crime",
+    "enunciado": "A respeito do instituto da tentativa, é correto afirmar que, salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de:",
+    "options": ["A) Um terço a dois terços.", "B) Metade.", "C) Um a dois terços.", "D) Um quarto a metade."],
+    "correta": 0,
+    "explicacao": "Art. 14, parágrafo único do CP: Salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um a dois terços."
+  },
+  {
+    "disciplina": "Direito Constitucional",
+    "tema": "Direitos Fundamentais",
+    "enunciado": "Nos termos da Constituição Federal, a prática do racismo constitui crime:",
+    "options": ["A) Inafiançável e prescritível.", "B) Afiançável e imprescritível.", "C) Inafiançável e imprescritível.", "D) Inafiançável e sujeito à pena de detenção."],
+    "correta": 2,
+    "explicacao": "Art. 5º, XLII, CF: a prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão, nos termos da lei."
+  },
+  {
+    "disciplina": "Direito Civil",
+    "tema": "Contratos",
+    "enunciado": "Pelo contrato de compra e venda, um dos contratantes se obriga a transferir o domínio de certa coisa, e o outro, a pagar-lhe certo preço em dinheiro. A tradição da coisa vendida, na falta de estipulação expressa, dar-se-á:",
+    "options": ["A) No domicílio do vendedor.", "B) No domicílio do comprador.", "C) No lugar onde ela se encontrava ao tempo da venda.", "D) Em local escolhido por sorteio."],
+    "correta": 2,
+    "explicacao": "Art. 493 do Código Civil: A tradição da coisa vendida, na falta de estipulação expressa, dar-se-á no lugar onde ela se encontrava ao tempo da venda."
+  }
+]
