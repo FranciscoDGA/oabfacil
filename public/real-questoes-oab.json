@@ -1,0 +1,67 @@
+[
+  {
+    "disciplina": "Direito Penal",
+    "tema": "Crimes contra a Pessoa",
+    "enunciado": "Mévio, lutador de artes marciais, desfere um único soco no rosto de Tício durante uma discussão em um bar. Tício cai, bate a cabeça no meio-fio e vem a falecer em decorrência exclusiva do traumatismo craniano causado pela queda. Mévio não tinha a intenção de matar Tício, mas apenas de lesioná-lo. O resultado morte, no entanto, era previsível dadas as circunstâncias. Qual é a correta capitulação jurídica para a conduta de Mévio?",
+    "options": [
+      "A) Homicídio doloso (dolo eventual).",
+      "B) Lesão corporal seguida de morte.",
+      "C) Homicídio culposo.",
+      "D) Lesão corporal grave."
+    ],
+    "correta": 1,
+    "explicacao": "Lesão corporal seguida de morte (Art. 129, § 3º, do CP). Trata-se de crime preterdoloso: há dolo na conduta antecedente (lesão) e culpa no resultado consequente (morte)."
+  },
+  {
+    "disciplina": "Direito Constitucional",
+    "tema": "Controle de Constitucionalidade",
+    "enunciado": "O Governador do Estado Alfa propõe Ação Direta de Inconstitucionalidade (ADI) perante o Supremo Tribunal Federal contra uma Lei Federal que dispõe sobre diretrizes e bases da educação nacional, argumentando que a lei fere o princípio federativo. Considerando a jurisprudência do STF sobre a legitimidade para propositura de ADI, é correto afirmar que:",
+    "options": [
+      "A) O Governador não possui legitimidade para propor ADI contra Lei Federal.",
+      "B) O Governador possui legitimidade ativa universal e pode propor a ADI independentemente do tema da lei.",
+      "C) O Governador possui legitimidade ativa especial, devendo demonstrar a pertinência temática entre o conteúdo da lei e os interesses do Estado Alfa.",
+      "D) A legitimidade do Governador restringe-se apenas a leis do próprio Estado que governa."
+    ],
+    "correta": 2,
+    "explicacao": "Governador de Estado (Art. 103, V, CF) é legitimado especial, precisando comprovar a pertinência temática (relação direta entre o objeto da lei impugnada e o interesse do Estado). Ele pode, sim, impugnar Lei Federal se houver essa pertinência."
+  },
+  {
+    "disciplina": "Ética Profissional",
+    "tema": "Direitos e Prerrogativas do Advogado",
+    "enunciado": "Durante o cumprimento de um mandado de busca e apreensão em um escritório de advocacia, determinado por juiz competente em investigação criminal contra o próprio advogado, a autoridade policial apreende documentos pertencentes a clientes do advogado que não têm relação com a investigação. Diante desse quadro, de acordo com o Estatuto da OAB (Lei 8.906/94):",
+    "options": [
+      "A) A apreensão é lícita, pois o mandado judicial afasta totalmente a inviolabilidade do escritório.",
+      "B) É direito do advogado ter o mandado cumprido na presença de representante da OAB e a apreensão não pode se estender a documentos de clientes não investigados.",
+      "C) A apreensão é ilícita apenas se o advogado não for previamente intimado da busca.",
+      "D) O representante da OAB tem o poder de vetar o cumprimento do mandado se julgar que há excessos."
+    ],
+    "correta": 1,
+    "explicacao": "Art. 7º, § 6º, do EAOAB: A quebra da inviolabilidade do escritório para busca e apreensão deve ser determinada por magistrado, restrita ao investigado, e acompanhada por representante da OAB, sob pena de nulidade, não podendo estender-se aos clientes."
+  },
+  {
+    "disciplina": "Direito do Trabalho",
+    "tema": "Jornada de Trabalho",
+    "enunciado": "Maria trabalha como caixa de supermercado. Em determinado mês, ela precisou fazer 2 horas extras diárias durante 10 dias. O supermercado adota o sistema de banco de horas por meio de acordo individual escrito com Maria, prevendo a compensação em até 6 meses. Sobre a validade desse banco de horas, segundo a CLT:",
+    "options": [
+      "A) É inválido, pois o banco de horas só pode ser instituído por acordo ou convenção coletiva de trabalho.",
+      "B) É válido, desde que a compensação ocorra no período máximo de seis meses, conforme o acordo individual.",
+      "C) É inválido, pois a compensação por acordo individual deve ocorrer no mesmo mês.",
+      "D) É válido, mas a compensação deve ocorrer no período máximo de um ano."
+    ],
+    "correta": 1,
+    "explicacao": "Art. 59, § 5º, da CLT (pós-Reforma Trabalhista de 2017): O banco de horas pode ser pactuado por acordo individual escrito, desde que a compensação ocorra no período máximo de seis meses."
+  },
+  {
+    "disciplina": "Direito Civil",
+    "tema": "Responsabilidade Civil",
+    "enunciado": "Roberto, de 16 anos de idade, dirigindo o carro de seu pai sem permissão, atropela e causa graves ferimentos em um pedestre. O pai de Roberto estava viajando a trabalho no momento do acidente. De acordo com o Código Civil brasileiro, a responsabilidade civil pelos danos causados ao pedestre:",
+    "options": [
+      "A) É exclusiva de Roberto, pois já possui discernimento para responder por seus atos.",
+      "B) É subsidiária do pai, que responderá apenas se Roberto não tiver patrimônio suficiente.",
+      "C) É objetiva e solidária do pai de Roberto, independentemente de culpa na vigilância do filho.",
+      "D) É exclusiva do pai de Roberto, sendo o filho absolutamente incapaz."
+    ],
+    "correta": 2,
+    "explicacao": "Art. 932, I c/c Art. 933 do Código Civil. Os pais são responsáveis pela reparação civil dos danos causados pelos filhos menores que estiverem sob sua autoridade e em sua companhia, sendo essa responsabilidade objetiva."
+  }
+]

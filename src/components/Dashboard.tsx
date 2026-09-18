@@ -1,18 +1,22 @@
-import { CheckCircle, Clock, BookOpen, Flame } from 'lucide-react';
+import { Target, BookOpen, Clock, Activity, CheckCircle } from 'lucide-react';
+import { GamificationWidget } from './GamificationWidget';
 
 export function Dashboard() {
+  const stats = [
+    { label: 'Questões Resolvidas', value: '1.248', icon: BookOpen, color: 'text-blue-500', bg: 'bg-blue-500/10' },
+    { label: 'Taxa de Acerto', value: '68%', icon: Target, color: 'text-green-500', bg: 'bg-green-500/10' },
+    { label: 'Horas de Estudo', value: '45h', icon: Clock, color: 'text-purple-500', bg: 'bg-purple-500/10' },
+    { label: 'Simulados Feitos', value: '4', icon: Activity, color: 'text-orange-500', bg: 'bg-orange-500/10' },
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto space-y-8 animate-in fade-in duration-500">
-      <header className="flex items-center justify-between">
-        <div>
-          <h2 className="text-3xl font-bold text-white mb-1">Olá, Estudante 👋</h2>
-          <p className="text-slate-400">Aqui está o seu resumo de progresso hoje.</p>
-        </div>
-        <div className="bg-slate-800 px-4 py-2 rounded-full flex items-center gap-2 border border-slate-700">
-          <Flame size={18} className="text-orange-500" />
-          <span className="font-semibold text-orange-500">12 dias de ofensiva</span>
-        </div>
-      </header>
+    <div className="max-w-6xl mx-auto space-y-8 animate-in fade-in duration-500 pb-12">
+      <div>
+        <h2 className="text-3xl font-bold text-white mb-2">Olá, Estudante 👋</h2>
+        <p className="text-slate-400">Aqui está o resumo do seu progresso até a aprovação.</p>
+      </div>
+
+      <GamificationWidget />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl backdrop-blur-sm">
