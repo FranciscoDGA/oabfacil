@@ -1,32 +1,84 @@
-import { useState } from 'react';
-import { Filter, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Filter, ChevronRight, Loader2 } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
-const mockQuestions = [
-  {
-    id: 1,
-    subject: 'Direito Penal',
-    theme: 'Crimes contra o patrimônio',
-    text: 'Caio, com intenção de subtrair para si coisa alheia móvel, aborda Tício na rua e, simulando portar arma de fogo, exige que este lhe entregue o celular. Tício, assustado, entrega o bem. Caio foge, mas é capturado pela polícia dois quarteirões depois. Qual é o crime cometido por Caio?',
-    options: [
-      'a) Furto simples.',
-      'b) Furto qualificado pelo emprego de fraude.',
-      'c) Roubo circunstanciado pelo emprego de arma de fogo.',
-      'd) Roubo simples.',
-    ],
-    correct: 3, // index 3 = d
-    explanation: 'A simulação de porte de arma caracteriza a grave ameaça inerente ao crime de roubo simples (art. 157, caput, CP). Não incide a majorante de arma de fogo pois a arma era apenas simulada.'
-  }
-];
+interface Question {
+  id: string;
+  subject: string;
+  theme: string;
+  text: string;
+  options: string[];
+  correct: number;
+  explanation: string;
+}
 
 export function QuestionBank() {
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const question = mockQuestions[0];
+  useEffect(() => {
+    async function fetchQuestions() {
+      try {
+        const { data, error } = await supabase
+          .from('questions')
+          .select('*')
+          .limit(50); // Carrega até 50 questões de uma vez
+        
+        if (error) throw error;
+        
+        if (data && data.length > 0) {
+          // Embaralhar as questões para não ser sempre na mesma ordem
+          const shuffled = data.sort(() => 0.5 - Math.random());
+          setQuestions(shuffled);
+        }
+      } catch (error) {
+        console.error('Erro ao buscar questões:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchQuestions();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[70vh] text-slate-400">
+        <Loader2 className="animate-spin mb-4" size={32} />
+        <p>Carregando banco de questões do Supabase...</p>
+      </div>
+    );
+  }
+
+  if (questions.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[70vh] text-slate-400">
+        <p className="text-xl font-bold mb-2">Nenhuma questão encontrada.</p>
+        <p>Parece que o banco de dados do Supabase ainda está vazio.</p>
+        <p className="text-sm mt-4 text-slate-500">Rode o script seed.sql no painel do Supabase!</p>
+      </div>
+    );
+  }
+
+  const question = questions[currentIndex];
 
   const handleAnswer = () => {
     if (selectedOption !== null) {
       setShowAnswer(true);
+    }
+  };
+
+  const nextQuestion = () => {
+    setSelectedOption(null);
+    setShowAnswer(false);
+    if (currentIndex < questions.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+    } else {
+      // Chegou ao fim do array, poderia buscar mais da API aqui
+      alert('Você finalizou esta bateria de questões! Parabéns!');
     }
   };
 
@@ -35,7 +87,9 @@ export function QuestionBank() {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h2 className="text-3xl font-bold text-white mb-2">Banco de Questões</h2>
-          <p className="text-slate-400">Pratique com questões reais da FGV.</p>
+          <p className="text-slate-400">
+            Questão {currentIndex + 1} de {questions.length} disponíveis
+          </p>
         </div>
         <button className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-xl border border-slate-700 transition-colors">
           <Filter size={18} />
@@ -110,10 +164,7 @@ export function QuestionBank() {
               <span className="font-semibold text-slate-100">Explicação:</span> {question.explanation}
             </p>
             <button 
-              onClick={() => {
-                setSelectedOption(null);
-                setShowAnswer(false);
-              }}
+              onClick={nextQuestion}
               className="mt-6 flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors font-medium text-sm"
             >
               Próxima questão <ChevronRight size={16} />
