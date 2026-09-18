@@ -1,4 +1,4 @@
-import { BookOpen, Target, Users, BookMarked, Trophy, Database } from 'lucide-react';
+import { BookOpen, Target, Users, BookMarked, Trophy, Database, Lightbulb } from 'lucide-react';
 
 interface SidebarProps {
   currentTab: string;
@@ -8,6 +8,7 @@ interface SidebarProps {
 export function Sidebar({ currentTab, setCurrentTab }: SidebarProps) {
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Target },
+    { id: 'onboarding', label: 'Como Usar (Guia)', icon: Lightbulb },
     { id: 'questions', label: 'Banco de Questões', icon: BookOpen },
     { id: 'exams', label: 'Simulados', icon: BookMarked },
     { id: 'community', label: 'Comunidade', icon: Users },

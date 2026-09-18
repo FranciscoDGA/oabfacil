@@ -3,6 +3,7 @@ import { Sidebar } from './components/Sidebar';
 import { Dashboard } from './components/Dashboard';
 import { QuestionBank } from './components/QuestionBank';
 import { Admin } from './components/Admin';
+import { Onboarding } from './components/Onboarding';
 
 function App() {
   const [currentTab, setCurrentTab] = useState('dashboard');
@@ -11,6 +12,8 @@ function App() {
     switch (currentTab) {
       case 'dashboard':
         return <Dashboard />;
+      case 'onboarding':
+        return <Onboarding />;
       case 'questions':
         return <QuestionBank />;
       case 'admin':
