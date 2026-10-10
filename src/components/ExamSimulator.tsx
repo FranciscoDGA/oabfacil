@@ -45,14 +45,14 @@ export function ExamSimulator() {
           </div>
           <h2 className="text-3xl font-bold text-white mb-4">Simulado Concluído!</h2>
           <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-            Você finalizou o simulado da 1ª Fase. A IA analisou suas respostas e seu cronograma foi ajustado.
+            Você concluiu este roteiro de treino. Esta versão ainda é um simulacro: as questões oficiais e o cálculo real de nota ainda não estão conectados.
           </p>
           
           <div className="grid grid-cols-3 gap-6 mb-8">
             <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-700">
               <p className="text-sm text-slate-400 mb-1">Pontuação</p>
-              <p className="text-3xl font-bold text-white">42<span className="text-lg text-slate-500">/80</span></p>
-              <p className="text-xs text-green-500 mt-2">Aprovado na 1ª Fase!</p>
+              <p className="text-3xl font-bold text-white">—</p>
+              <p className="text-xs text-slate-500 mt-2">Sem correção oficial nesta versão</p>
             </div>
             <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-700">
               <p className="text-sm text-slate-400 mb-1">Tempo Total</p>
@@ -200,7 +200,7 @@ export function ExamSimulator() {
           </div>
           <h3 className="text-xl font-bold text-white mb-4 mt-6">Atenção ao Padrão!</h3>
           <p className="text-slate-400 text-sm leading-relaxed mb-4">
-            Em Direito Penal, a banca tem focado muito em <b>Crimes contra a Administração Pública</b> (Peculato, Corrupção). Revisamos seu histórico e vimos que você acertou apenas 40% desse tema.
+            Dica de estudo para Crimes contra a Administração Pública (Peculato, Corrupção): revise os tipos legais e as elementares de posse e finalidade.
           </p>
           <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
             <p className="text-xs text-slate-500 font-bold uppercase mb-1">Dica Rápida</p>

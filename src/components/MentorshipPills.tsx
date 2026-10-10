@@ -1,4 +1,4 @@
-import { PlayCircle, FileText, Crosshair, Zap } from 'lucide-react';
+import { PlayCircle, Crosshair, Zap, Clock, BookOpen } from 'lucide-react';
 
 export function MentorshipPills() {
   const pills = [
@@ -39,7 +39,7 @@ export function MentorshipPills() {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {pills.map((pill, idx) => (
-        <div key={idx} className="group cursor-pointer bg-slate-800 border border-slate-700 hover:border-slate-500 transition-all duration-300 rounded-2xl p-5 flex gap-4">
+        <div key={idx} className="group bg-slate-800 border border-slate-700 hover:border-slate-500 transition-all duration-300 rounded-2xl p-5 flex gap-4">
           <div className={`${pill.color}/20 h-14 w-14 shrink-0 rounded-xl flex items-center justify-center`}>
             <PlayCircle className={pill.color.replace('bg-', 'text-')} size={28} />
           </div>
@@ -64,6 +64,3 @@ export function MentorshipPills() {
     </div>
   );
 }
-
-// Importing icons here to avoid modifying props or missing imports
-import { Clock, BookOpen } from 'lucide-react';

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Upload, Database, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { Upload, Database, CheckCircle2, AlertCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import Papa from 'papaparse';
 
@@ -28,7 +28,7 @@ export function Admin() {
             // Se veio do CSV com colunas opcao_a, opcao_b, etc
             options = [item.opcao_a, item.opcao_b, item.opcao_c, item.opcao_d].filter(Boolean);
           }
-        } catch (e) {
+        } catch {
           options = [item.opcao_a, item.opcao_b, item.opcao_c, item.opcao_d].filter(Boolean);
         }
 
@@ -84,7 +84,7 @@ export function Admin() {
           const json = JSON.parse(event.target?.result as string);
           const data = Array.isArray(json) ? json : json.questions || [];
           await processData(data);
-        } catch (err) {
+        } catch {
           setError('Arquivo JSON inválido.');
           setLoading(false);
         }
