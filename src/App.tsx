@@ -4,6 +4,8 @@ import { Dashboard } from './components/Dashboard';
 import { QuestionBank } from './components/QuestionBank';
 import { Admin } from './components/Admin';
 import { Onboarding } from './components/Onboarding';
+import { ExamSimulator } from './components/ExamSimulator';
+import { Community } from './components/Community';
 
 function App() {
   const [currentTab, setCurrentTab] = useState('dashboard');
@@ -16,6 +18,10 @@ function App() {
         return <Onboarding />;
       case 'questions':
         return <QuestionBank />;
+      case 'exams':
+        return <ExamSimulator />;
+      case 'community':
+        return <Community />;
       case 'admin':
         return <Admin />;
       default:
